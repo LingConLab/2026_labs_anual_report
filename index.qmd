@@ -1,0 +1,47 @@
+```{r}
+#| include: false
+
+library(tidyverse)
+library(bib2df)
+library(flextable)
+read_tsv("bibliography.tsv") |> 
+  distinct() |> 
+  df2bib(file = "bibliography.bib")
+```
+
+# СПИСОК ИСПОЛНИТЕЛЕЙ {.unnumbered .unlisted}
+
+Руководитель темы:
+
+```{r}
+read_csv("data/people_head.csv", na = "NA") |>  
+  mutate_all(function(i){ifelse(is.na(i), "", i)}) |> 
+  gt::gt() |>
+  gt::tab_options(column_labels.hidden = TRUE,
+                  table.align = "left") |>
+  gt::opt_table_lines(extent = "none") 
+```
+
+Исполнители:
+
+```{r}
+read_csv("data/people.csv", na = "NA") |>
+  mutate_all(function(i){ifelse(is.na(i), "", i)}) |> 
+  gt::gt() |>
+  gt::tab_options(column_labels.hidden = TRUE,
+                  table.align = "left") |>
+  gt::opt_table_lines(extent = "none") 
+```
+
+# РЕФЕРАТ {.unnumbered .unlisted}
+
+Отчет ... стр., рис. ..., табл. ..., ... источник.
+
+...
+
+
+# ПЕРЕЧЕНЬ СОКРАЩЕНИЙ И ОБОЗНАЧЕНИЙ {.unnumbered .unlisted}
+
+В настоящем отчете о НИР применяют следующие сокращения и обозначения.
+
+...

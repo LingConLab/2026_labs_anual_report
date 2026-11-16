@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+/.quarto/
+result/.~lock.*
+.~lock.*
+
+**/*.quarto_ipynb
