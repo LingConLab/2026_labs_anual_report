@@ -11,11 +11,7 @@ book:
   chapters:
     - index.qmd
     - 00_intro.qmd
-    - 01_conlab.qmd
-    - 01_corpuslab.qmd
-    - 01_loglab.qmd
-    - 01_teaching_corpuslab.qmd
-    - 01_spb_conlab.qmd
+    - 01_formlab.qmd
     - 06_conclusions.qmd
     
 bibliography: bibliography.bib
