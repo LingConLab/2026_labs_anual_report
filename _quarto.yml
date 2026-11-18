@@ -11,13 +11,11 @@ book:
   chapters:
     - index.qmd
     - 00_intro.qmd
-    - 01_corpuslab.qmd
-    - 01_conlab.qmd
-    - 01_arctic.qmd
-    - 01_formlab.qmd
-    - 01_loglab.qmd
-    - 01_teaching_corpuslab.qmd
-    - 01_spb_conlab.qmd
+    - 01_typology.qmd
+    - 02_language.qmd
+    - 03_formal.qmd
+    - 04_logic.qmd
+    - 05_computer.qmd
     - 06_conclusions.qmd
     
 bibliography: bibliography.bib
