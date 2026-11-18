@@ -1,9 +1,17 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
 ```{r}
 #| include: false
 
 library(tidyverse)
 library(bib2df)
 library(flextable)
+library(lingglosses)
+options("lingglosses.italic_transliteration" = FALSE)
+
 read_tsv("bibliography.tsv") |> 
   distinct() |> 
   df2bib(file = "bibliography.bib")
