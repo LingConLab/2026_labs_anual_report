@@ -1,5 +1,5 @@
 library(tidyverse)
-read_csv("/home/agricolamz/work/LAB/annual_reports/2026_labs_annual_report/merged_quarto/data/t.csv") |> 
+read_csv("/home/agricolamz/work/LAB/annual_reports/2026_labs_annual_report/merged_quarto/data/all_people.csv") |> 
   mutate(across(everything(), function(x) str_remove_all(x, "\n")),
          n = str_replace(n, "\\(", " \\("),
          n = str_squish(n)) |> 
