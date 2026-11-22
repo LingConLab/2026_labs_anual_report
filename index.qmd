@@ -14,6 +14,10 @@ options("lingglosses.italic_transliteration" = FALSE)
 
 read_tsv("bibliography.tsv") |> 
   distinct() |> 
+  mutate(TITLE = str_remove(TITLE, "\\.$"),
+         BOOKTITLE = str_remove(BOOKTITLE, "\\.$"),
+         TITLE = stringi::stri_replace_all_regex(TITLE, "(\\p{Lu})", "{$1}"),
+         BOOKTITLE = stringi::stri_replace_all_regex(BOOKTITLE, "(\\p{Lu})", "{$1}")) |> 
   df2bib(file = "bibliography.bib")
 ```
 
