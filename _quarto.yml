@@ -42,6 +42,8 @@ format:
     warning: false
     fig-align: center
     toc: true
+    list:
+      bullet: "–"
     toc-title: СОДЕРЖАНИЕ
     number-sections: true
     highlight-style: github
